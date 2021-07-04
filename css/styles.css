@@ -163,4 +163,21 @@ h1 {
   .source {
     font-size: 1.25rem;
   }
+
+  .tags {
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
+    position: relative;
+    width: 12em;
+    max-height: 75px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+    
+  }
+
 }
