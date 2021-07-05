@@ -48,7 +48,7 @@ let current;
 let quoteBox=document.getElementById("quote-box");
 let tags=[];
 let backgroundColor;
-setInterval(printQuote, 10000);
+let interval=setInterval(printQuote, 10000);
 
 quoteBox.innerHTML=printQuote();
 
@@ -68,6 +68,7 @@ function randomColor(){
 
 //PRINT QUOTE AND THE QUOTES MEMBERS TO DOCUMMENT VIA A FORMATED STRING
 //UPDATES DOCUMENT BACKGROUNDCOLOUR
+//RESETS INTERVAL TIMER.
 function printQuote(){
   document.body.style.backgroundColor=randomColor();
   let quote=getRandomQuote(quotes);
@@ -86,6 +87,8 @@ function printQuote(){
   }
   html+=`</p>`
   quoteBox.innerHTML=html;
+  clearInterval(interval);
+  interval=setInterval(printQuote, 10000);
 
   return html;
 }
